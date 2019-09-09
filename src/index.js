@@ -12,7 +12,7 @@ class Observer extends Component {
     let options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0 || threshold
+      threshold: threshold || 0
     };
 
     let observer = new IntersectionObserver(onChange, options);
