@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Observer extends Component {
   componentDidMount() {
@@ -24,5 +25,11 @@ class Observer extends Component {
     return <div id={elementId}>{children}</div>;
   }
 }
+
+Observer.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  elementId: PropTypes.string.isRequired,
+  threshold: PropTypes.number
+};
 
 export default Observer;
