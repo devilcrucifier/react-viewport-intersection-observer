@@ -1,6 +1,6 @@
 {
   "name": "react-viewport-intersection-observer",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A react package for Intersection Observer API",
   "main": "./lib/Observer.js",
   "author": "Amit Kushwaha",
@@ -36,7 +36,9 @@
     "React Component",
     "inview",
     "useInview",
-    "useIntersectionObserver"
+    "useIntersectionObserver",
+    "scrolling",
+    "lazyloading"
   ],
   "repository": {
     "type": "git",
