@@ -16,13 +16,13 @@ npm i --save react-viewport-intersection-observer
 import Observer from "react-viewport-intersection-observer";
 
 const ObserverExample = () =>
-    <Observer
-      onChange={callbackExample}
-      elementId="exampleId"
-      threshold={0}
-    >
-      {children}
-    </Observer> ;
+  <Observer
+    onChange={callbackExample}
+    elementId="exampleId"
+    threshold={0} /* Optional */
+  >
+    {children}
+  </Observer> ;
 
 ```
 

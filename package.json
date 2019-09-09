@@ -1,6 +1,6 @@
 {
   "name": "react-viewport-intersection-observer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A react package for Intersection Observer API",
   "main": "./lib/Observer.js",
   "author": "Amit Kushwaha",
