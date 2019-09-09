@@ -1,6 +1,6 @@
 {
   "name": "react-viewport-intersection-observer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A react package for Intersection Observer API",
   "main": "./lib/Observer.js",
   "author": "Amit Kushwaha",
@@ -37,5 +37,9 @@
     "inview",
     "useInview",
     "useIntersectionObserver"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devilcrucifier/react-viewport-intersection-observer"
+  }
 }
