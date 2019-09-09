@@ -1,0 +1,28 @@
+import React, { Component } from "react";
+
+class Observer extends Component {
+  componentDidMount() {
+    this.interSectionObersever();
+  }
+
+  interSectionObersever = () => {
+    const { onChange, elementId, threshold } = this.props;
+
+    let options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0 || threshold
+    };
+
+    let observer = new IntersectionObserver(onChange, options);
+    let target = document.querySelector(`#${elementId}`);
+    observer.observe(target);
+  };
+
+  render() {
+    const { children, elementId } = this.props;
+    return <div id={elementId}>{children}</div>;
+  }
+}
+
+export default Observer;
