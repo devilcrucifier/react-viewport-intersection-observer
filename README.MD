@@ -1,6 +1,6 @@
 # react-viewport-intersection-observer
 
-A React npm package for Google's Intersection Observer API.
+A React npm package for Intersection Observer API.
 URL: https://www.npmjs.com/package/react-viewport-intersection-observer
 
 ## Installing
