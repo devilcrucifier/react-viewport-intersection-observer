@@ -1,13 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
+import ReactDOM from "react-dom";
 
-class Observer extends Component {
+class Observer extends React.Component {
   componentDidMount() {
     this.interSectionObersever();
   }
 
   interSectionObersever = () => {
-    const { onChange, elementId, threshold } = this.props;
+    const { onChange, threshold } = this.props;
+    const target = ReactDOM.findDOMNode(this);
 
     let options = {
       root: null,
@@ -16,19 +18,16 @@ class Observer extends Component {
     };
 
     let observer = new IntersectionObserver(onChange, options);
-    let target = document.querySelector(`#${elementId}`);
     observer.observe(target);
   };
 
   render() {
-    const { children, elementId } = this.props;
-    return <div id={elementId}>{children}</div>;
+    return this.props.children;
   }
 }
 
 Observer.propTypes = {
   onChange: PropTypes.func.isRequired,
-  elementId: PropTypes.string.isRequired,
   threshold: PropTypes.number
 };
 

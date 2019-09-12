@@ -18,7 +18,6 @@ import Observer from "react-viewport-intersection-observer";
 const ObserverExample = () =>
   <Observer
     onChange={callbackExample}
-    elementId="exampleId"
     threshold={0} /* Optional */
   >
     {children}
@@ -50,7 +49,6 @@ let callback = (entries, observer) => {
 };
 
 ```
-**elementId** - String value for the id attribute specific to a unique id for an HTML element.
 
 **threshold** - It could be a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. Default value is 0. 
 
