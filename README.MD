@@ -18,7 +18,9 @@ import Observer from "react-viewport-intersection-observer";
 const ObserverExample = () =>
   <Observer
     onChange={callbackExample}
-    threshold={0} /* Optional */
+    rootId="example-root-id"            /* Optional */
+    rootMargin="10px 20px 30px 40px"    /* Optional */
+    threshold={0}                       /* Optional */
   >
     {children}
   </Observer> ;
