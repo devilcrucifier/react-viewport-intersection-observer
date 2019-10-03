@@ -8,12 +8,12 @@ class Observer extends React.Component {
   }
 
   interSectionObersever = () => {
-    const { onChange, threshold } = this.props;
+    const { onChange, rootId, rootMargin, threshold } = this.props;
     const target = ReactDOM.findDOMNode(this);
 
     let options = {
-      root: null,
-      rootMargin: "0px",
+      root: document.querySelector(`#${rootId}`) || null,
+      rootMargin: rootMargin || "0px",
       threshold: threshold || 0
     };
 
@@ -28,6 +28,8 @@ class Observer extends React.Component {
 
 Observer.propTypes = {
   onChange: PropTypes.func.isRequired,
+  rootId: PropTypes.string,
+  rootMargin: PropTypes.string,
   threshold: PropTypes.number
 };
 
