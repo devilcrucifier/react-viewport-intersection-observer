@@ -13,17 +13,32 @@ npm i --save react-viewport-intersection-observer
 ## Usage
 
 ```
+import React from "react";
 import Observer from "react-viewport-intersection-observer";
 
-const ObserverExample = () =>
-  <Observer
-    onChange={callbackExample}
-    rootId="example-root-id"            /* Optional */
-    rootMargin="10px 20px 30px 40px"    /* Optional */
-    threshold={0}                       /* Optional */
-  >
-    {children}
-  </Observer> ;
+class ReactViewportIntersectionObserver extends React.Component {
+  handleIntersectionCallback = event => {
+    console.log(event[0].isIntersecting);
+    console.log(event[0].target);
+  };
+
+  render() {
+    return (
+      <div id="example-root-id">
+        <Observer
+          onChange={this.handleIntersectionCallback}
+          rootId="example-root-id"                      /* Optional */
+          rootMargin="10px 20px 30px 40px"              /* Optional */
+          threshold={0}                                 /* Optional */
+        >
+          <div>Target Child Element</div>
+        </Observer>
+      </div>
+    );
+  }
+}
+
+export default ReactViewportIntersectionObserver;
 
 ```
 
