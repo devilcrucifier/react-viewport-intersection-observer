@@ -75,6 +75,11 @@ let callback = (entries, observer) => {
 
 For example, if you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array [0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
 
+
+## Authors
+
+For complete spec support, please use the IntersectionObserver polyfill(https://github.com/w3c/IntersectionObserver/tree/master/polyfill).
+
 ## Authors
 
 - **Amit Kushwaha** (https://github.com/devilcrucifier)
